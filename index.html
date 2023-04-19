@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/reset.css">
     <link rel="stylesheet" href="estilos/estilo.css">
     <title>Encriptador/Desencriptador</title>
 </head>
@@ -17,27 +18,29 @@
     </header>
     <main>
 
-        <div class="traduccion">
+        <div class="bloque-tradu">
             <div>
-                <textarea name="codificado" id="" cols="30" rows="10" placeholder="Ingrese su texto"></textarea>
+                <textarea name="codificado" id="codex" cols="40" rows="15" placeholder="Ingrese su texto" onkeyup="javascript:this.value=this.value.toLowerCase();"></textarea>
                 <div class="botones">
-                    <input type="button" value="Codificar">
-                    <input type="button" value="Decodificar">
+                    <input class="myButton" id="boton_codex" type="button" value="Codificar" onclick="encriptar()">
+                    <input class="myButton" id="boton_decodex" type="button" value="Decodificar" onclick="desencriptar()">
                 </div>
             </div>
         </div>
-        <div class="resultado">
-            <textarea name="textresult" id="" cols="30" rows="10"></textarea>
+        <div class="bloque-tradu">
+            <textarea name="textresult" id="decodex" cols="40" rows="15"></textarea>
             <div class="botones">
-                <input type="button" value="Copiar">
+                <input class="myButton" id="boton_copy" type="button" value="Copiar" onclick="copiar_texto()">
             </div>
         </div>
     </main>
     <footer>
         <div class="desarrollador">
-            <p>Pogliani, Germán Darìo</p>
+            <p>&copy Pogliani, Germán Darìo</p>
         </div>
     </footer>
+
+    <script src="apps/funciones.js"></script>
 </body>
 
 </html>

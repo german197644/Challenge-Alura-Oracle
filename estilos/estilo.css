@@ -3,6 +3,8 @@
 body {
     width: 1000px;
     margin: 0 auto;
+    background-color: whitesmoke;
+    font-family: 'Roboto Mono', monospace;
 }
 
 /* header */
@@ -11,36 +13,80 @@ body {
     border: 1px solid black;
     border-radius: 5px;
     margin: 10px 0;
-    /*background: url("../img/fondo.jpg");*/
-    background-color: grey;
+    background: url("../img/seguridad.jpg");
+    background-size: contain;
+    background-repeat: repeat-x;
+    background-color: transparent;
 }
 
 .logo {
     font-weight: bold;
     margin-left: 30px;
-    font-size: 100px;
+    font-size: 50px;
+    color: white;
+}
+
+.logo_2 {
+    font-weight: bold;
+    margin-left: 30px;
+    font-size: xx-large;
+    color: white;
+
 }
 
 /* main */
 
 main {
-    width: auto;
+    width: 100%;
     border: 1px solid black;
     border-radius: 5px;
     box-sizing: border-box;
     margin-top: 25px;
     padding: 10px;
+    text-align: center;
 }
 
 .bloque-tradu {
-    width: 49%;
+    width: 48%;
+    height: 100%;
     border: 0px solid black;
     display: inline-block;
+    padding: 5px;
+    vertical-align: top;
 }
 
-#codex{    
-    text-transform: lowercase; /*texto siempre a minuscula*/
-    
+.code-deco {
+    width: auto;
+}
+
+.titulo1 {
+    margin-bottom: 5px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+    color: darkslategrey;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+.advertir {
+    text-align: left;
+    font-weight: bold;
+    font-size: 10px;
+    margin: 5px;
+    padding-bottom: 5px;
+}
+
+#codex {
+    text-transform: lowercase;
+    /*texto siempre a minuscula*/
+    min-width: 99%;
+    border-radius: 5px;
+}
+
+#decodex {
+    min-width: 99%;
+    border-radius: 5px;
 }
 
 .myButton {
@@ -60,6 +106,7 @@ main {
     border: 2px solid rgb(28, 110, 164);
     display: inline-block;
     margin-top: 10px;
+    margin-left: 5px;
 }
 
 .myButton:hover {

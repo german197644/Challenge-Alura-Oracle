@@ -17,6 +17,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
     <!-- Titulo -->
     <title>Encriptador/Desencriptador</title>
+    <!-- ventana emergente - CDN -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 <body>
@@ -27,25 +29,44 @@
         </div>
     </header>
     <main>
-        <div class="bloque-tradu">
+
+        <!-- Bloque izquierdo donde se ingresa el texto que se quiere traducir -->
+        <div class="bloque1">
             <div class="code-deco">
-                <p class="titulo1">Ingreso de texto.</p>
-                <textarea name="codificado" id="codex" cols="40" rows="15" placeholder="Ingrese su texto"
+                <!--  <p class="titulo1">Ingreso de texto.</p> -->
+                <textarea name="codificado" id="codex" cols="40" rows="15" placeholder="Ingrese el texto aquí."
                     onkeyup="javascript:this.value=this.value.toLowerCase();"></textarea>
-                <p class="advertir"><i class="fa-sharp fa-solid fa-circle-exclamation"></i>Sin letras minúsculas y sin acentos</p>
+
+                <!-- <p class="advertir"><i class="fa-sharp fa-solid fa-circle-exclamation"></i> Sin letras minúsculas y sin
+                    acentos &#8252;.</p> -->
+
+                <p class="advertir"><i class="fa-sharp fa-solid fa-circle-exclamation"></i> Sin letras minúsculas y sin
+                    acentos.</p>
+
             </div>
 
             <div class="botones">
-                <input class="myButton" id="boton_codex" type="button" value="Codificar" onclick="encriptar()">
-                <input class="myButton" id="boton_decodex" type="button" value="Decodificar" onclick="desencriptar()">
+                <input class="myButton" id="boton_codex" type="button" value="Codificar" onclick="codificar(1)">
+                <input class="myButton" id="boton_decodex" type="button" value="Decodificar" onclick="codificar(0)">
             </div>
-
         </div>
-        <div class="bloque-tradu">
-            <p class="titulo1">Texto tratado.</p>
-            <textarea name="textresult" id="decodex" cols="40" rows="15"></textarea>
-            <div class="botones">
-                <input class="myButton" id="boton_copy" type="button" value="Copiar" onclick="copiar_texto()">
+
+        <!-- Bloque derecho donde se muestra el texto traducido o no. -->
+        <div class="bloque2">
+            <div id="nodato">
+                <!-- muestro la imagen si no hay texto para traducir -->
+                <!-- <img id="imagen2" src="./img/muñeco.png" alt="¡No se puede mostrar la imagen en este momento!."> -->
+                <img id="imagen1" src="img/noResult.png" alt="¡No se puede mostrar la imagen de seguridad!.">
+                <p>Ningun mensaje fue encontrado</p>
+                <p>Ingresa el texto que desea encriptar o desencriptar.</p>
+            </div>
+            <!-- muestro los resultados si hay texto -->
+            <div id="resultado">                
+                <!-- <p class="titulo1">Texto tratado.</p> -->
+                <textarea name="textresult" id="decodex" cols="35" rows="15"></textarea>
+                <div class="botones">
+                    <input class="myButton" id="boton_copy" type="button" value="Copiar" onclick="copiar_texto()">
+                </div>
             </div>
         </div>
     </main>
@@ -54,8 +75,9 @@
             <p>&copy Pogliani, Germán Darío</p>
         </div>
     </footer>
+    <script src="apps/funciones.js">
 
-    <script src="apps/funciones.js"></script>
+    </script>
 </body>
 
 </html>

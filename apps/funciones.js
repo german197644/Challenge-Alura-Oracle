@@ -90,7 +90,7 @@ function codificar(opcion) {
         document.getElementById("decodex").innerHTML = _texto;
 
         // mostramos el boton de copiar.    
-        document.getElementById("boton-copy").style.display = "inherit";
+        //document.getElementById("boton-copy").style.display = "inherit";
 
     } else if (opcion === 0) {
 
@@ -110,7 +110,7 @@ function codificar(opcion) {
         document.getElementById("decodex").innerHTML = _texto;
 
         // mostramos el boton de copiar.                
-        document.getElementById("boton-copy").style.display = "inherit";
+        //document.getElementById("boton-copy").style.display = "inherit";
 
     }
 }

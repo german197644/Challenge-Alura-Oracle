@@ -13,7 +13,7 @@ body {
     border: 0px solid black;
     border-radius: 5px;
     margin: 10px 0;
-    background: url("../img/fondo.png");
+    background: url("../img/fondo3.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-color: transparent;
@@ -140,6 +140,7 @@ main {
     display: inline-block;
     margin-top: 10px;
     margin-left: 5px;
+    width: 120px;
 }
 
 .myButton:hover {

@@ -18,6 +18,16 @@
 let _encripta = { "e": "enter", "i": "imes", "a": "ai", "o": "ober", "u": "ufat" };
 
 
+/**
+ * 
+ * quita todos los acentos de una frase
+ * 
+ */
+function quitarAcentos(cadena){
+	const acentos = {'á':'a','é':'e','í':'i','ó':'o','ú':'u','Á':'A','É':'E','Í':'I','Ó':'O','Ú':'U'};
+	return cadena.split('').map( letra => acentos[letra] || letra).join('').toString();	
+}
+
 /** 
  * 
  * Esta funcion encripta.
@@ -25,7 +35,8 @@ let _encripta = { "e": "enter", "i": "imes", "a": "ai", "o": "ober", "u": "ufat"
 */
 function encriptar() {
     // recorremos el diccionario a traves de sus claves.
-    let _texto = document.getElementById("codex").value;
+    let _texto = document.getElementById("codex").value;    
+
     for (var i in _encripta) {
         _texto = _texto.replaceAll(i, _encripta[i]);
     }
@@ -61,6 +72,8 @@ function desencriptar() {
 function codificar(opcion) {
     // capturamos el texto;
     let _texto = document.getElementById("codex").value;
+    _texto = quitarAcentos(_texto);
+    console.log(_texto);
 
     //evaluamos si hay datos.
     if (_texto === "") {
@@ -134,3 +147,4 @@ document.getElementById("boton_copy").onclick = function () {
             swal("Oop!", "Hubo un problema copiando al portapapeles!", "error");
         });
 }
+
